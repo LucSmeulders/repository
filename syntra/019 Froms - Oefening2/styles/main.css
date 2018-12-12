@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #5D6063;
+  background-color: #EAEDF0;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+
+}
+
+.speaker-form-header h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.left-row{
+    width: 40%;
+    height: 100px;
+    float: left;
+    margin: 1%;
+}
+
+.right-row{
+  width: 40%;
+  height: 100px;
+  float: left;
+  margin: 1%;
+}
+
+.full{
+  width: 82%;
+  height: 100px;
+  float: left;
+  margin: 1%;
+}
+.clearfix{
+    clear: both;
+}
+.speaker-form {
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  width: 80%;
+  padding: 10px;
+  margin: 0 0 0 0;
+}
+
+.form-row {
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start; /* To avoid stretching */
+}
+
+.form-row input[type='text'],
+.form-row input[type='tel'],
+.form-row input[type='email'],
+.form-row input[type='checkbox'],
+.form-row input[type='radio'] {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 12px;
+}
+
+.form-row label {
+  margin-bottom: 5px;
+}
+
+.form-row input[type='text']:invalid,
+.form-row input[type='tel']:invalid,
+.form-row input[type='email']:invalid {
+  border: 1px solid #D55C5F;
+  color: #D55C5F;
+  box-shadow: none; /* Remove default red glow in Firefox */
+}
+
+.form-row textarea {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+
+  min-height: 200px;
+  margin-bottom: 5px;
+  padding: 7px;
+  resize: none;
+}
+
+.form-row button {
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #FFFFFF;
+  background-color: #5995DA;
+
+  border: none;
+  border-radius: 3px;
+
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.form-row button:hover {
+  background-color: #76AEED;
+}
+
+.form-row button:active {
+  background-color: #407FC7;
+}

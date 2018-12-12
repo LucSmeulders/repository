@@ -1,0 +1,25 @@
+.menu {
+  float: left;
+  height: 100px;
+  width:200px;
+  background-color: #B2D6FF;
+}
+
+.sidebar {
+  float: none;
+  height: 300px;
+  width:200px;
+  background-color: #F09A9D;
+}
+
+.content {
+  height: 500px;
+  width:200px;
+  background-color: #F5CF8E;
+}
+
+.footer {
+  height: 200px;
+  width:200px;
+  background-color: #D6E9FE;
+}

@@ -1,0 +1,61 @@
+/* A Simple css file  */
+body {
+  color: #414141;               /* Dark gray */
+  background-color: #EEEEEE;    /* Light gray */
+}
+ 
+h1 {
+  font-size: 36px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-weight: normal;                              /* Add this */
+}
+
+* lijsten
+ul {
+  list-style-type: circle;
+}
+ 
+ol {
+  list-style-type: lower-roman;
+}
+
+p {
+  text-align: left;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+ 
+strong {
+  font-weight: normal;
+  font-style: italic;
+}
+
+********************************************************
+class=""
+html = <p class="example">This is a example text</p>
+/* External CSS file */
+ 
+.example{
+  text-align: right;
+}
+id=""
+html = <h1 id="myHeader">My Header</h1>
+#myHeader {
+    background-color: lightblue;
+    color: black;
+    padding: 40px;
+    text-align: center;
+} 
+
+Resetting Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
