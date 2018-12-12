@@ -1,71 +1,39 @@
 <?php
   ini_set('display_error', 5);
   error_reporting(E_ALL);
-  $totAmount = 600;
-  $discount = 0;
+  $product = 150;
+  $vat = 21;
+  $name1[1] = "Dimphy Vogtschmidt";
+  $name1[2] = "Erden Ozyalcin";
+  $name1[3] = "Dorien Huishagen";
+  $name1[4] = "Frederik Wiame";
+  $name1[5] = "laurents Bijlhout";
+  $name1[6] = "Luc Smeulders";
+  $name1[7] = "Mathias Zabot";
+  $name1[8] = "Tim Rodeyns";
+  $name1[9] = "VJJM Neven";
+  $name1[10] = "Wilfried Van Damme";
 ?>
 
 <html>
 
    <head>
-      <title>Uw kassas</title>
+      <title>Hello World</title>
    </head>
 
    <body>
      <?php
-        echo "Totaal bedrag van uw aankopen =  " , $totAmount, "€";
+     for($i=0;$i<=10;$i+=0.3) {
+       echo str_repeat('*',sin($i)*20+30),'<br>';
+     }
 
-        if($totAmount>500) {
-          $discount = 20;
-        }
-        elseif ($totAmount>250) {
-          $discount = 15;
-        }
-        elseif ($totAmount>150) {
-          $discount = 7.5;
-        }
-        elseif ($totAmount>100) {
-          $discount = 5;
-        }
-        else {
-          $discount = 0;
-        }
-        echo '<br>';
-        echo "Uw korting is ", $discount , "%";
-        echo '<br>';
-        echo "Het te betalen bedrag = ", $totAmount * (100-$discount)/100, "€";
+     echo '<br>';
+     for($index=0;$index<=sizeof($name1);$index++) {
+       if(isSet($name1[$index])){
+         echo "Hallo ",$name1[$index], '<br>';
+       }
 
-        echo '<br>';
-        echo '<br>';
-        echo '<br>';
-        echo "Totaal bedrag van uw aankopen =  " , $totAmount, "€";
-
-        switch (True){
-          case($totAmount>500): {
-            $discount = 20;
-            break;
-          }
-          case ($totAmount>250): {
-            $discount = 15;
-            break;
-          }
-          case ($totAmount>150): {
-            $discount = 7.5;
-            break;
-          }
-          case ($totAmount>100): {
-            $discount = 5;
-            break;
-          }
-          default: {
-            $discount = 0;
-            break;
-          }
-        }
-        echo '<br>';
-        echo "Uw korting is ", $discount , "%";
-        echo '<br>';
-        echo "Het te betalen bedrag = ", $totAmount * (100-$discount)/100, "€";
+     }
     ?>
     <address>
       <br><br>
