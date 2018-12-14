@@ -3,16 +3,7 @@
   error_reporting(E_ALL);
   $product = 150;
   $vat = 21;
-  $name1[1] = "Dimphy Vogtschmidt";
-  $name1[2] = "Erden Ozyalcin";
-  $name1[3] = "Dorien Huishagen";
-  $name1[4] = "Frederik Wiame";
-  $name1[5] = "laurents Bijlhout";
-  $name1[6] = "Luc Smeulders";
-  $name1[7] = "Mathias Zabot";
-  $name1[8] = "Tim Rodeyns";
-  $name1[9] = "VJJM Neven";
-  $name1[10] = "Wilfried Van Damme";
+  $test = "abcdefg";
 ?>
 
 <html>
@@ -23,17 +14,13 @@
 
    <body>
      <?php
-     for($i=0;$i<=10;$i+=0.3) {
-       echo str_repeat('*',sin($i)*20+30),'<br>';
-     }
-
-     echo '<br>';
-     for($index=0;$index<=sizeof($name1);$index++) {
-       if(isSet($name1[$index])){
-         echo "Hallo ",$name1[$index], '<br>';
-       }
-
-     }
+        echo "<h1>Functions</h1><br>";
+        echo "Oppervlakte rechthoek " , surfaceRectagle(10,14) , "<br>";
+        echo "Omtrek rechthoek " , perimeterRectagle(10,14) , "<br>";
+        echo "Lengte diagonaal rechthoek " , diagonalLengteRectagle(3,4) , "<br>";
+        echo "Oppervlakte cirkel " , surfaceCircle(10) , "<br>";
+        echo "'abc' naar hash = " , hash ( "md5" , "abc"), "<br>";
+        display(8);
     ?>
     <address>
       <br><br>
@@ -44,3 +31,51 @@
 
 
 </html>
+
+<?php
+  function surfaceRectagle($height=0,$width=0)
+    {
+      return $height * $width;
+    }
+
+  function perimeterRectagle($height=0,$width=0)
+    {
+      return $height *  2 +  $width * 2;
+    }
+
+  function diagonalLengteRectagle($height=0,$width=0)
+    {
+      return sqrt(pow($height,2) +  pow($width,2));
+    }
+
+
+  function surfaceCircle($radius=0)
+    {
+      return kwardraat($radius *  2) *  pi() /4;
+    }
+
+  function kwardraat($number)
+    {
+      /*return $number*$number;*/
+      return pow($number,2);
+    }
+
+    function double2($var)
+    {
+      return $var * 2;
+    }
+
+    function tripple($var)
+    {
+      return $var * 3;
+    }
+
+    function display($var)
+    {
+      echo "Totaal waarde ".$var." x2 = " , double2($var), "<br>";
+      echo "Totaal waarde ".$var." x3 = " , tripple($var), "<br>";
+      global $test;
+      echo $test;
+    }
+
+?>

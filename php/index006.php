@@ -3,6 +3,19 @@
   error_reporting(E_ALL);
   $product = 150;
   $vat = 21;
+  $counter=0;
+
+  function IsPrime($n)
+    {
+     for($x=2; $x<$n; $x++)
+       {
+          if($n %$x ==0)
+    	      {
+    		   return 0;
+    		  }
+        }
+      return 1;
+    }
 ?>
 
 <html>
@@ -13,8 +26,12 @@
 
    <body>
      <?php
-        echo $hello , " " , $voornaam , " " , $achternaam;
-        echo "Bedrag incl BTW " , number_format($product * (1 + ($vat / 100)),2);
+        do {
+          if(IsPrime($counter) == 1){
+            echo $counter, " is een priemgetal<br>";
+          } 
+          $counter++;
+        } while($counter<=20)
     ?>
     <address>
       <br><br>
@@ -25,7 +42,3 @@
 
 
 </html>
-
-<?php
-
-?>
