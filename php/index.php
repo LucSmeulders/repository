@@ -1,26 +1,37 @@
 <?php
   ini_set('display_error', 5);
   error_reporting(E_ALL);
-  $product = 150;
-  $vat = 21;
-  $test = "abcdefg";
+  $maxvalue = 8;
+  $index=0;
+  $actorsNames = array("Piet","Jan","Carlo");
+  $floatSpeed = 10.4;
+  $names = array("Coro","Johnny Cago","Kano","Liu Kano","Raiden","Raptile","Scorpion","Shang","Tsun","Sonya","Sub-Zero");
 ?>
 
 <html>
 
    <head>
-      <title>Hello World</title>
+      <title>Hello Worldje</title>
    </head>
 
    <body>
      <?php
-        echo "<h1>Functions</h1><br>";
-        echo "Oppervlakte rechthoek " , surfaceRectagle(10,14) , "<br>";
-        echo "Omtrek rechthoek " , perimeterRectagle(10,14) , "<br>";
-        echo "Lengte diagonaal rechthoek " , diagonalLengteRectagle(3,4) , "<br>";
-        echo "Oppervlakte cirkel " , surfaceCircle(10) , "<br>";
-        echo "'abc' naar hash = " , hash ( "md5" , "abc"), "<br>";
-        display(8);
+        echo "het getal ",$floatSpeed," afgerond naar boven = ", ceil($floatSpeed),"<br>";
+        echo "het getal ",$floatSpeed," afgerond naar beneden = ", floor($floatSpeed),"<br>";
+        echo "<br>";
+        echo showRandomName($names);
+
+
+        for($index=0;$index<sizeof($actorsNames);$index++){
+          sayActorsName($index,$actorsNames[$index]);
+        }
+
+        echo "<br>";
+        sayAllActorsNames($actorsNames);
+
+        for($index=1;$index<=$maxvalue;$index++){
+          sayOddOrEven($index);
+        }
     ?>
     <address>
       <br><br>
@@ -33,49 +44,45 @@
 </html>
 
 <?php
-  function surfaceRectagle($height=0,$width=0)
-    {
-      return $height * $width;
+  function sayOddOrEven($value){
+    if($value%2 == 0){
+      echo "Het getal ",$value," is even";
+    } else {
+      echo "Het getal ",$value," is oneven";
     }
+    echo "<br>";
 
-  function perimeterRectagle($height=0,$width=0)
-    {
-      return $height *  2 +  $width * 2;
+  }
+
+  function sayActorsName($index,$actorsName)
+  {
+    echo "De ",$index+1,"e acteur is ",$actorsName,"<br>";
+
+  }
+
+  function sayAllActorsNames($actorsNames)
+  {
+    $positionStr = array("eerste","tweede","derde","vierde","vijfde","zesde","zevende","achtste","negende","tiende");
+    $index=0;
+    $arraySize = sizeof($actorsNames);
+    for($index=0;$index<$arraySize;$index++){
+      echo $actorsNames[$index]," is de ",$positionStr[$index]," acteur";
+      /* adding a extra comma at eitch sub-text, but not after the last one*/
+      if ($index<$arraySize-1)
+      {
+        echo ", ";
+      }
     }
+    echo "<br>";
+    echo "<br>";
+  }
 
-  function diagonalLengteRectagle($height=0,$width=0)
-    {
-      return sqrt(pow($height,2) +  pow($width,2));
-    }
+  function showRandomName($names)
+  {
+    $arraySize = sizeof($names);
+    $randNum = rand(0,$arraySize-1);
 
-
-  function surfaceCircle($radius=0)
-    {
-      return kwardraat($radius *  2) *  pi() /4;
-    }
-
-  function kwardraat($number)
-    {
-      /*return $number*$number;*/
-      return pow($number,2);
-    }
-
-    function double2($var)
-    {
-      return $var * 2;
-    }
-
-    function tripple($var)
-    {
-      return $var * 3;
-    }
-
-    function display($var)
-    {
-      echo "Totaal waarde ".$var." x2 = " , double2($var), "<br>";
-      echo "Totaal waarde ".$var." x3 = " , tripple($var), "<br>";
-      global $test;
-      echo $test;
-    }
-
-?>
+    echo "Een willekeurige naam ",$names[$randNum];
+    echo "<br>";
+  }
+ ?>
