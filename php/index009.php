@@ -12,14 +12,16 @@
    <body>
      <?php
         $fileName = "txtFolder/myFile.txt";
-        $fileSize = filesize($fileName);
-        $fileHandle = fopen($fileName,'r');
-        for($index=1;$index<$fileSize;$index++){
-          $fileContent = fread($fileHandle,$index);
+        if(file_exists($fileName)){
+          $fileSize = filesize($fileName);
+          $fileHandle = fopen($fileName,'r'); // or die("kan bestand niet openen !!!");
+          $fileContent = fread($fileHandle,$fileSize);
           echo $fileContent;
           echo "<br>";
+          fclose($fileHandle);
+        } else {
+          echo "File not found";
         }
-        fclose($fileHandle);
     ?>
     <address>
       <br><br>

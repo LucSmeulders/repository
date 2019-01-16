@@ -11,9 +11,10 @@
 
    <body>
      <?php
+        $txt1 = "This is the new text";
         $fileName = "txtFolder/myFileNew.txt";
-        $fileHandle = fopen($fileName,'w+');
-        fwrite($fileHandle,"This is the new text");
+        $fileHandle = fopen($fileName,'a') or die("kan bestand niet aanmaken !!!");
+        fwrite($fileHandle,$txt1.chr(13).chr(10));
         fclose($fileHandle);
         echo "File is created !"
     ?>
