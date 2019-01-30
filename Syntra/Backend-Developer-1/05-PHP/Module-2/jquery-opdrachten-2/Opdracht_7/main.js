@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    var count = 0;
+    console.log(count);
+
     /* On click: Enlarge the font (120%) */
     $("#instructions").find("li").eq(0).click(function( event ) {
       $('#content').css("font-size", "120%");
@@ -34,7 +37,15 @@ $(document).ready(function(){
     });
 
     /* On click: add "Chapter 1:" before the 1st title h2 and "Chapter 2:" before the 2nd title h2 */
-    $("h2").eq(0).mouseover(function( event ) {
-      $(this).prepend("Chapter 1:" );
+    $("#instructions").find("li").eq(6).hover(function( event ) {
+      $("h2").toggleClass("bold");
+    });
+
+    $("#instructions").find("li").eq(6).click(function( event ) {
+      if(count==0){
+        count++;
+        $("h2").eq(0).prepend("Chapter 1:" );
+        $("h2").eq(1).prepend("Chapter 2:" );
+      }
     });
 });
