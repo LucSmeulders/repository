@@ -32,6 +32,6 @@ if($resultOk==0){
   if($attemps>2){
     echo 'Te veel pogingen (',$attemps,'), wacht 5 minuten...';
   } else {
-    header('Location: index.html');
+    /*header('Location: index.html');*/
   }
 }
