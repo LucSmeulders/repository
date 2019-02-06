@@ -1,8 +1,14 @@
 <?php
+
+// if not load continue with code
 include_once 'function.php';
 
+// if not load, stop programm
+require 'db_connect.php';
+require 'db_getData.php';
+
 session_start();
-$myUsers = array(array("lucsmeulders@gmail.com" , "abc"),array("joop@gmail.com","geen"));
+$myUsers = $rows;  // array(array("lucsmeulders@gmail.com" , "abc"),array("joop@gmail.com","geen"));
 $myEmail = "lucsmeulders@gmail.com";
 $myPassWord = "abc";
 $resultOk = 0;
