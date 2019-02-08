@@ -3,7 +3,7 @@
   $sql = "SELECT * FROM USERS";
 
   $result = mySqli_query($conn, $sql);
-  $rows = [];
+  $array = [];
   //var_dump($result);
 
   if(mysqli_num_rows($result) > 0){
