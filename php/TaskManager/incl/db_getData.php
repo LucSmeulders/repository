@@ -1,6 +1,6 @@
 <?php
 
-  $sql = "SELECT * FROM USERS";
+  $sql = "SELECT * FROM 'tasks' ";
 
   $result = mySqli_query($conn, $sql);
   $array = [];
