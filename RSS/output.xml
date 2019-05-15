@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+ <channel>
+  <title>Ministrare - News Cast</title>
+  <link>www.ministrare.be</link>
+  <description>NewsCast</description>
+  <language>nl</language>
+  <image>
+   <title></title>
+   <link></link>
+   <url></url>
+   <width></width>
+   <height></height>
+  </image>
+  <item>
+   <title>Website is going down, End of the world is near!</title>
+   <pubDate>Fri 9 Oct 2019 13:00</pubDate>
+   <link>http://www.ministrare.be/blog/4</link>
+   <description>&lt;![CDATA[End of the world!]]&gt;</description>
+   <author></author>
+   <comments></comments>
+   <category></category>
+   <author></author>
+   <enclosure url="http://www.ministrare.be/podcast.mp4" length="19741854" type="video/mpeg"/>
+  </item>
+  <item>
+   <title>Our first post is a fact!</title>
+   <pubDate>Wen 7 Oct 2019 13:00</pubDate>
+   <link>http://www.ministrare.be/blog/3</link>
+   <description>&lt;![CDATA[Visit this &lt;a href=&quot;http://www.ministrare.be&quot;&gt;link&lt;/a&gt; to my website!]]&gt;</description>
+   <author></author>
+   <comments></comments>
+   <category></category>
+   <author></author>
+   <enclosure url="http://www.ministrare.be/podcast.mp4" length="19741854" type="video/mpeg"/>
+  </item>
+  <item>
+   <title>Our second post is alive!</title>
+   <pubDate>Mon 5 Oct 2019 13:00</pubDate>
+   <link>http://www.ministrare.be/blog/2</link>
+   <description>&lt;![CDATA[Visit this &lt;a href=&quot;http://www.ministrare.be&quot;&gt;link&lt;/a&gt; to my website!]]&gt;</description>
+   <author></author>
+   <comments></comments>
+   <category></category>
+   <author></author>
+   <enclosure url="http://www.ministrare.be/podcast.mp4" length="19741854" type="video/mpeg"/>
+  </item>
+  <item>
+   <title>Our first post is a fact!</title>
+   <pubDate>Sat 3 Oct 2019 13:00</pubDate>
+   <link>http://www.ministrare.be/blog/1</link>
+   <description>&lt;![CDATA[Visit this &lt;a href=&quot;http://www.ministrare.be&quot;&gt;link&lt;/a&gt; to my website!]]&gt;</description>
+   <author></author>
+   <comments></comments>
+   <category></category>
+   <author></author>
+   <enclosure url="http://www.ministrare.be/podcast.mp4" length="19741854" type="video/mpeg"/>
+  </item>
+ </channel>
+</rss>
